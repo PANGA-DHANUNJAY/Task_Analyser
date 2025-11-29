@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Smart Task Analyzer</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h1>Smart Task Analyzer</h1>
+
+<div class="container">
+    <div>
+        <h2>Add Task</h2>
+
+        <input id="title" placeholder="Title" />
+        <input id="due" type="date" />
+        <input id="hours" type="number" placeholder="Estimated Hours" />
+        <input id="importance" type="number" placeholder="Importance (1-10)" />
+        <input id="deps" placeholder="Dependencies (comma separated)" />
+
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div>
+        <h2>Bulk JSON Input</h2>
+        <textarea id="bulk" placeholder="Paste JSON array of tasks"></textarea>
+    </div>
+</div>
+
+<!-- Buttons Row -->
+<div style="margin-top: 20px;">
+    <button onclick="analyze()" class="analyze-btn">Analyze Tasks</button>
+    <button onclick="suggest()" class="suggest-btn">Suggest Tasks</button>
+</div>
+
+<h2>Output</h2>
+<div id="output"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
